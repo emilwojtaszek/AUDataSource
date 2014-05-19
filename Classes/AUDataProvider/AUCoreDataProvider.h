@@ -19,7 +19,6 @@
 @property (nonatomic, weak) id<AUCoreDataProviderDelegate> delegate;
 
 /**
- NSFetchedResultsController of current `DTCoreDataStorage` object.
  */
 @property (nonatomic, strong, readonly) NSFetchedResultsController *fetchedResultsController;
 

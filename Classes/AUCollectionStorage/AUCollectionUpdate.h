@@ -28,16 +28,16 @@
 /**
  * Index paths of deleted rows for current update.
  */
-@property (nonatomic, strong) NSMutableSet *deletedRowIndexPaths;
+@property (nonatomic, strong) NSMutableArray *deletedRowIndexPaths;
 
 /**
  * Index paths of inserted rows for current update.
  */
-@property (nonatomic, strong) NSMutableSet *insertedRowIndexPaths;
+@property (nonatomic, strong) NSMutableArray *insertedRowIndexPaths;
 
 /**
  * Index paths of updated rows for current update.
  */
-@property (nonatomic, strong) NSMutableSet *updatedRowIndexPaths;
+@property (nonatomic, strong) NSMutableArray *updatedRowIndexPaths;
 
 @end

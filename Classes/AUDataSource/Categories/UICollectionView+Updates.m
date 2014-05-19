@@ -36,9 +36,9 @@
     
     if (itemChanges > 0 && sectionChanges == 0) {
         [self performBatchUpdates:^{
-            [self deleteItemsAtIndexPaths:[update.deletedRowIndexPaths allObjects]];
-            [self insertItemsAtIndexPaths:[update.insertedRowIndexPaths allObjects]];
-            [self reloadItemsAtIndexPaths:[update.updatedRowIndexPaths allObjects]];
+            [self deleteItemsAtIndexPaths:update.deletedRowIndexPaths];
+            [self insertItemsAtIndexPaths:update.insertedRowIndexPaths];
+            [self reloadItemsAtIndexPaths:update.updatedRowIndexPaths];
         } completion:nil];
     }
 }

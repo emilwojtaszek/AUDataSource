@@ -14,18 +14,18 @@
     [self beginUpdates];
     
     [self deleteSections:update.deletedSectionIndexes
-                  withRowAnimation:UITableViewRowAnimationAutomatic];
+        withRowAnimation:UITableViewRowAnimationFade];
     [self insertSections:update.insertedSectionIndexes
-                  withRowAnimation:UITableViewRowAnimationAutomatic];
+        withRowAnimation:UITableViewRowAnimationFade];
     [self reloadSections:update.updatedSectionIndexes
-                  withRowAnimation:UITableViewRowAnimationAutomatic];
+        withRowAnimation:UITableViewRowAnimationFade];
     
-    [self deleteRowsAtIndexPaths:[update.deletedRowIndexPaths allObjects]
-                          withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self insertRowsAtIndexPaths:[update.insertedRowIndexPaths allObjects]
-                          withRowAnimation:UITableViewRowAnimationAutomatic];
-    [self reloadRowsAtIndexPaths:[update.updatedRowIndexPaths allObjects]
-                          withRowAnimation:UITableViewRowAnimationAutomatic];
+    [self deleteRowsAtIndexPaths:update.deletedRowIndexPaths
+                withRowAnimation:UITableViewRowAnimationFade];
+    [self insertRowsAtIndexPaths:update.insertedRowIndexPaths
+                withRowAnimation:UITableViewRowAnimationFade];
+    [self reloadRowsAtIndexPaths:update.updatedRowIndexPaths
+                withRowAnimation:UITableViewRowAnimationFade];
     
     [self endUpdates];
 }
